@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Vacation {
+
+	public static void main(String[] args) {
+		System.out.println("What kind of trip would you like to go on, musical,\r\n" + 
+				"tropical, or adventurous? ");
+		Scanner scnr=new Scanner(System.in);
+		String vacationType=scnr.next();
+		String destination="";
+		
+        //int groupSize=scnr.nextInt();
+        String result;
+        boolean b;
+        b=true;
+      //System.out.println(vacationType);
+       while(b==true)
+       {
+        if(vacationType.equals("Musical"))
+        {
+        	destination="New Orleans";
+            b=false;
+        }
+        else if(vacationType.equals("Tropical"))
+        {
+        	destination="Beach vacation in Mexico";
+        	 b=false;
+        
+        }
+        else if(vacationType.equals("Adventurous"))
+        {
+        	destination="Whitewater rafting the Grand Canyon";
+        	b=false;
+        	
+        }
+        else
+        {
+        	System.out.println("Please enter the destination type mentioned above");
+        	b=true;
+        	scnr=new Scanner(System.in);
+        	vacationType=scnr.next();
+        } 	
+       }
+     
+        System.out.println(destination);
+	}
+
+}
