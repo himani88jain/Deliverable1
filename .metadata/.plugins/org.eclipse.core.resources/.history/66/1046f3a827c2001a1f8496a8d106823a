@@ -13,18 +13,18 @@ public class Vacation {
       
        while(b==true)
        {
-    	   if(vacationType.equalsIgnoreCase("Musical"))
+    	   if(vacationType.equals("Musical"))
     	   {
     		   destination="New Orleans";
     		   b=false;
     	   	}
-    	   else if(vacationType.equalsIgnoreCase("Tropical"))
+    	   else if(vacationType.equals("Tropical"))
     	   {
     		   destination="Beach vacation in Mexico";
     		   b=false;
         
     	   }
-    	   else if(vacationType.equalsIgnoreCase("Adventurous"))
+    	   else if(vacationType.equals("Adventurous"))
     	   {
     		   destination="Whitewater rafting the Grand Canyon";
     		   b=false;
@@ -39,13 +39,7 @@ public class Vacation {
        }
      
         System.out.println("How many are in your group?");
-        int groupSize =0;
-        try {        
-        groupSize=scnr.nextInt();
-       }
-       catch (Exception e) {
-    	   System.out.println("The number enetered is not a valid Integer.");
-       }
+        int groupSize=scnr.nextInt();
         String travelSugg="";
         boolean a;
         a=true;
@@ -70,19 +64,14 @@ public class Vacation {
         	{
         		System.out.println("Please enter the group size again");
         		scnr=new Scanner(System.in);
-        		try {        
-        	        groupSize=scnr.nextInt();
-        	       }
-        	       catch (Exception e) {
-        	    	   System.out.println("The number enetered is not a valid Integer.");
-        	       }
+        		groupSize=scnr.nextInt();
         		a=true;
         	}
         }
         
         result="Since you’re a group of "+groupSize+" going on a "+vacationType+" vacation, you should take a "+travelSugg+" to "+destination;
        System.out.println(result);
-       scnr.close();
 	}
 	
+
 }

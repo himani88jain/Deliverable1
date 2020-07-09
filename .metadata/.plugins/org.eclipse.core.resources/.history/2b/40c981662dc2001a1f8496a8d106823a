@@ -44,7 +44,7 @@ public class Vacation {
         groupSize=scnr.nextInt();
        }
        catch (Exception e) {
-    	   System.out.println("The number enetered is not a valid Integer.");
+    	   System.out.println("Please enter a valid number");
        }
         String travelSugg="";
         boolean a;
@@ -70,12 +70,7 @@ public class Vacation {
         	{
         		System.out.println("Please enter the group size again");
         		scnr=new Scanner(System.in);
-        		try {        
-        	        groupSize=scnr.nextInt();
-        	       }
-        	       catch (Exception e) {
-        	    	   System.out.println("The number enetered is not a valid Integer.");
-        	       }
+        		groupSize=scnr.nextInt();
         		a=true;
         	}
         }
